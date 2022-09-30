@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Scheherazade New";
+  color: black;
+  scroll-behavior: smooth;
+}
+#image {
+  width: 100%;
+  opacity: 0.25x;
+}
+body {
+  min-height: 1000px;
+  background-color: white;
+}
+/* header css */
+header {
+  background: #000;
+  scroll-behavior: smooth;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 15px; */
+  padding: 8px 48px;
+  z-index: 1000;
+  transition: 0.6s;
+}
+header.sticky {
+  padding: 5px 47px;
+  background: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .Logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+/* header logo css */
+header .Logo span {
+  color: red;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  transition: 0.6s;
+}
+header ul li a:hover {
+  font-size: 25px;
+}
+header.sticky .Logo,
+header.sticky ul li a {
+  color: white;
+}

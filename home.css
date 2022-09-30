@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Scheherazade New";
+  /* background-color:white; */
+  scroll-behavior: smooth;
+}
+#image {
+  width: 100%;
+  opacity: 0.25x;
+}
+body {
+  min-height: 1000px;
+  background-color: white;
+}
+/* header css */
+header {
+  scroll-behavior: smooth;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* padding: 10px 15px; */
+  padding: 20px 47px;
+  z-index: 2;
+  transition: 0.6s;
+}
+header.sticky {
+  padding: 5px 47px;
+  background: black;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+header .Logo {
+  position: relative;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2em;
+  letter-spacing: 2px;
+  transition: 0.6s;
+}
+/* header logo css */
+header .Logo span {
+  color: red;
+}
+header ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  transition: 0.6s;
+}
+header ul li a:hover {
+  font-size: 25px;
+}
+header.sticky .Logo,
+header.sticky ul li a {
+  color: white;
+}
+
+/* banner css */
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(image/homepage3.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* filter: blur(2px); */
+}
+.banner h2 {
+  letter-spacing: 5px;
+  word-spacing: 2px;
+  display: block;
+  color: white;
+  font-size: 90px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1em;
+}
+.jai {
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  color: white;
+  font-size: 35px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.jay span {
+  color: red;
+  letter-spacing: 3px;
+}
+
+.toggle {
+  display: none;
+}
+
+/* footer */
+footer
+{
+  background-color: black;
+  color: #fff;
+  height: 40px;
+  width: 100%;
+}
+footer h4{
+  font-weight: lighter;
+  margin: 0px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+}
+footer h4 a{
+  text-decoration: none;
+  list-style: none;
+  font-weight: lighter;
+  font-size: large;
+  color: white;
+  letter-spacing: 1px;
+}
+
+
+/* responsive header */
+@media (max-width: 1072px) {
+  .toggle {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+  }
+  .toggle:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    z-index: 1;
+    box-shadow: 0 10px 0 #000;
+    transition: 0.5%;
+  }
+  .toggle:after {
+    content: "";
+    position: absolute;
+    bottom: 4px;
+    width: 100%;
+    height: 2px;
+    background: #000;
+    z-index: 1;
+    transition: 0.5%;
+  }
+
+  #header,
+  #header.sticky {
+    padding: 5px 50px;
+    background: #fff;
+  }
+  
+  #header ul {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    width: 100%;
+    height: 55vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    overflow: auto;
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+  }
+  #header.active ul {
+    visibility: visible;
+    opacity: 1;
+    display: block;
+    padding-top: 20px;
+  }
+  #header.active ul li a {
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  #header .Logo,
+  #header ul li a {
+    color: #000;
+  }
+  .banner {
+    background-position: center;
+  }
+  .banner h2 {
+    font-size: 60px;
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 530px) {
+  #home h2{
+    font-size: 9vw;
+  }
+  .jai{
+    font-size: 3vw;
+  }
+}
+
+
+/* responsive banner*/
+@media (max-height: 376px) {
+    .banner{
+      margin-top:50px;
+    }
+
+    .jay{
+      font-size: 5vw;
+    }
+    .jai{
+      font-size: 3vw;
+    }
+}

@@ -1,0 +1,149 @@
+.full {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(image/links11.jpg);
+  background-size: cover;
+}
+.Links {
+  padding-top: 50px;
+}
+.Links h2 {
+  /*well this is not gonna worth anymore*/
+  color: blue;
+  position: relative;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Links ul {
+  color: blue;
+  position: relative;
+  /* padding-bottom: 376px; */
+  justify-content: left;
+  align-items: center;
+}
+.Links ul li {
+  list-style: none;
+  position: relative;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.Links ul li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+}
+.Links ul li a {
+  font-size: 21px;
+  position: relative;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 2px;
+  font-weight: 300;
+  color: black;
+}
+.Links ul li a:hover {
+  text-decoration: underline;
+  color: red;
+}
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.Four {
+  justify-self: center;
+}
+.sidefour {
+  justify-self: center;
+}
+
+@media (max-width: 1220px) {
+  .Links {
+    background-position: center;
+  }
+  .Links {
+    font-size: 30px;
+    padding: 0 50px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 890px) and (min-width: 579px) {
+  .full {
+    width: 100%;
+    height: 120vh;
+    background-position: center;
+  }
+  .container {
+    /* font-size-adjust: 0.74; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    /* flex-wrap: wrap; */
+  }
+  .Links {
+    padding-top: 50px;
+  }
+  .Links h2 {
+    font-size: 30px;
+  }
+  .Links ul li {
+    display: inline-grid;
+    /* grid-template-columns: auto; */
+    grid-template-areas: "four four";
+  }
+  .Links ul li a {
+    word-spacing: normal;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 578px) {
+  .Hemal {
+    font-size: 9vw;
+  }
+  .full {
+    background: #fff;
+  }
+  .container {
+    font-size-adjust: 0.74;
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .Links {
+    padding: 0 15px;
+  }
+  .Links h2 {
+    padding-top: 54px;
+    font-size: 2rem;
+  }
+  .Links ul {
+    padding-left: 0px;
+    margin-left: 0px;
+  }
+  .Links ul li{
+    
+    margin-top: 0px;
+  }
+  
+  .Links ul li a {
+    list-style: square;
+    word-spacing: 0px;
+    font-size: 5vw;
+  }
+  
+  ::marker{
+    color: red;
+  }
+}
